@@ -14,6 +14,7 @@ namespace OpencartTesting.Tools
         public void BeforeEachMethod()
         {
             ChromeOptions options = new ChromeOptions();
+            options.AddArgument("--disable-dev-shm-usage");
             options.AddArgument("window-size=1920,1080");
             options.AddArgument("start-maximized");
             options.AddArgument("headless");
