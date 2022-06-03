@@ -35,8 +35,8 @@ namespace OpencartTesting.Tools
             options.AddArguments("--disable-gpu"); // applicable to windows os only
             options.AddArguments("--disable-dev-shm-usage"); // overcome limited resource problems
             options.AddArguments("--no-sandbox"); // Bypass OS security model
-          
-           
+            options.AddArgument("headless");
+
 
 
 
