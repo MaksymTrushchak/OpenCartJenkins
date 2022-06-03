@@ -14,15 +14,17 @@ namespace OpencartTesting.Tools
         public void BeforeEachMethod()
         {
             ChromeOptions options = new ChromeOptions();
+           
             options.AddArgument("--disable-dev-shm-usage");
+            /*
             options.AddArgument("window-size=1920,1080");
             options.AddArgument("start-maximized");
-            options.AddArgument("headless");
+            options.AddArgument("headless"); 
             options.AddArgument("disable-gpu");
             options.AddArgument("no-sandbox");
             options.AddArgument("proxy-server='direct://'");
             options.AddArgument("proxy-bypass-list=*");
-
+            */
             driver = new ChromeDriver();
             /*
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(20);
