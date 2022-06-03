@@ -25,7 +25,7 @@ namespace OpencartTesting.Tools
             options.AddArgument("proxy-server='direct://'");
             options.AddArgument("proxy-bypass-list=*");
             
-            driver = new ChromeDriver("chromedriver/chromedriver ");
+            driver = new ChromeDriver("chromedriver/");
             /*
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(20);
             driver.Manage().Window.Maximize();
