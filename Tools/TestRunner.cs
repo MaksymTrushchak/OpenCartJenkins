@@ -23,10 +23,13 @@ namespace OpencartTesting.Tools
             options.AddArgument("proxy-bypass-list=*");
 
             driver = new ChromeDriver();
+            /*
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(20);
             driver.Manage().Window.Maximize();
+            */
             driver.Navigate().GoToUrl(OpenCartURL);
-        }
+           
+            }
        
         [TearDown]
         public void AfterEachMethod() 
