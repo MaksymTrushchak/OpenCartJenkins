@@ -21,7 +21,7 @@ namespace OpencartTesting.Tools
             options.AddArgument("start-maximized");
             options.AddArgument("headless"); 
             options.AddArgument("disable-gpu");
-            options.AddArgument("no-sandbox");
+            options.AddArgument("--no-sandbox");
             options.AddArgument("proxy-server='direct://'");
             options.AddArgument("proxy-bypass-list=*");
             
