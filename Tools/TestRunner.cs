@@ -26,23 +26,22 @@ namespace OpencartTesting.Tools
             //options.AddArgument("proxy-bypass-list=*");
            
             
-            chromeOptions.AddArgument("--no-sandbox");
-            chromeOptions.AddArgument("--disable-setuid-sandbox");
-
-            chromeOptions.AddArgument("--remote-debugging-port=9222"); 
-
-            chromeOptions.AddArgument("--disable-dev-shm-using");
-            chromeOptions.AddArgument("--disable-extensions");
-            chromeOptions.AddArgument("--disable-gpu");
-            chromeOptions.AddArgument("start-maximized");
-            chromeOptions.AddArgument("disable-infobars");
-            chromeOptions.AddArgument("user-data-dir=.\\cookies\\test");
-
+          
+           // System.SetProperty("webdriver.chrome.driver", "C:\\path\\to\\chromedriver.exe");
+            ChromeOptions options = new ChromeOptions();
+            options.AddArguments("start-maximized"); // open Browser in maximized mode
+            options.AddArguments("disable-infobars"); // disabling infobars
+            options.AddArguments("--disable-extensions"); // disabling extensions
+            options.AddArguments("--disable-gpu"); // applicable to windows os only
+            options.AddArguments("--disable-dev-shm-usage"); // overcome limited resource problems
+            options.AddArguments("--no-sandbox"); // Bypass OS security model
+          
            
 
 
 
-            driver = new ChromeDriver();
+
+            driver = new ChromeDriver(options);
             /*
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(20);
             driver.Manage().Window.Maximize();
