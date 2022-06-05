@@ -41,7 +41,7 @@ namespace OpencartTesting.Tools
 
 
 
-            driver = new ChromeDriver("chromedriver/", options);
+            driver = new ChromeDriver(options);
             /*
             driver.Manage().Timeouts().ImplicitWait = TimeSpan.FromSeconds(20);
             driver.Manage().Window.Maximize();
